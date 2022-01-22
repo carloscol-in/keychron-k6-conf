@@ -1,0 +1,9 @@
+[Unit]
+Description=Command to make the Keychron K6 Work
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c "echo 0 > /sys/module/hid_apple/parameters/fnmode"
+
+[Install]
+WantedBy=multi-user.target
